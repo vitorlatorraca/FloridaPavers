@@ -1,0 +1,183 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+    background-color: #000; /* Fundo preto */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    max-height: 80px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    color: #fff; /* Texto branco */
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ff4c4c; /* Hover vermelho */
+}
+
+.phone {
+    color: #ff4c4c; /* Número de telefone em vermelho */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.phone a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Hero Section */
+.hero {
+    background: url('pavers-bg.jpg') no-repeat center center/cover;
+    height: 500px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com transparência */
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #ff4c4c; /* Botão vermelho */
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e03a3a; /* Hover do botão */
+}
+
+/* Carousel Section */
+.carousel-section {
+    background-color: #333; /* Fundo cinza escuro */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.carousel-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff; /* Texto branco */
+}
+
+.carousel {
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Ajustar para que apenas uma imagem seja visível por vez */
+}
+
+.carousel-images img {
+    min-width: 100%; /* Somente uma imagem de cada vez */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 76, 76, 0.8); /* Hover dos botões de navegação */
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
