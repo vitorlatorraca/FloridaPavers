@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavers Pro - Quality Paving Services</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Pavers Service</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="container">
-            <img src="logo1.png" alt="Pavers Pro Logo" class="logo">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="phone">
-                <a href="tel:2399551444">📞 Call Us: (239) 955-1444</a>
-            </div>
-        </div>
-    </header>
+  <!-- Header Section -->
+  <header>
+    <div class="header-content">
+      <img src="logo2.png" alt="Best Pavers Service Logo" class="logo">
+      <h1>Best Pavers Service</h1>
+      <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>Welcome to Pavers Pro</h1>
-        <p>Your Trusted Paving Experts for Driveways, Patios, and More.</p>
-        <a href="#contact" class="btn">Get a Quote Today</a>
-    </section>
+  <!-- Carousel Section -->
+  <section class="carousel">
+    <div class="carousel-wrapper">
+      <img src="image1.jpg" alt="Image 1" class="carousel-image active">
+      <img src="image2.jpg" alt="Image 2" class="carousel-image">
+      <img src="image3.jpg" alt="Image 3" class="carousel-image">
+      <button id="prev" class="carousel-control prev">&#10094;</button>
+      <button id="next" class="carousel-control next">&#10095;</button>
+    </div>
+  </section>
 
-    <!-- Carousel Section -->
-    <section id="work" class="carousel-section">
-        <h2>Our Recent Work</h2>
-        <div class="carousel">
-            <button class="prev">❮</button>
-            <div class="carousel-images">
-                <img src="image1.jpg" alt="Work Image 1">
-                <img src="image2.jpg" alt="Work Image 2">
-                <img src="image3.jpg" alt="Work Image 3">
-                <img src="image4.jpg" alt="Work Image 4">
-                <img src="image5.jpg" alt="Work Image 5">
-                <img src="image6.jpg" alt="Work Image 6">
-                <img src="image7.jpg" alt="Work Image 7">
-            </div>
-            <button class="next">❯</button>
-        </div>
-    </section>
+  <!-- Contact Form Section -->
+  <section class="contact-form">
+    <h3>Contact Us</h3>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Pavers Pro. All rights reserved.</p>
-    </footer>
+  <!-- About Section -->
+  <section class="info-section">
+    <h2>About Us</h2>
+    <p>We provide the best paving services in the region. Our experienced team ensures high-quality results with every project. Contact us for a free quote!</p>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Best Pavers Service. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

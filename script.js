@@ -1,25 +1,15 @@
-const carouselImages = document.querySelector('.carousel-images');
-const images = carouselImages.querySelectorAll('img');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-
 let currentIndex = 0;
+const images = document.querySelectorAll('.carousel-image');
+const totalImages = images.length;
 
-function showImage(index) {
-    const width = images[0].clientWidth;
-    carouselImages.style.transform = `translateX(-${index * width}px)`;
-}
-
-prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-    showImage(currentIndex);
+document.getElementById('next').addEventListener('click', function() {
+  images[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex + 1) % totalImages;
+  images[currentIndex].classList.add('active');
 });
 
-nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-    showImage(currentIndex);
-});
-
-window.addEventListener('resize', () => {
-    showImage(currentIndex);
+document.getElementById('prev').addEventListener('click', function() {
+  images[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+  images[currentIndex].classList.add('active');
 });
