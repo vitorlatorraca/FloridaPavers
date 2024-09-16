@@ -1,206 +1,111 @@
-/* General Styles */
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #111; /* Fundo preto */
-    color: #fff; /* Texto branco */
-  }
-  
-  /* Header Styles */
-  header {
-    background: rgba(132, 132, 132, 0.8); /* Header semi-transparente */
-    padding: 20px;
-    position: relative;
-    border-radius: 8px; /* Arredondamento das bordas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  }
-  
-  .header-content {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    --yellow: #f5bf23;
+    --black: #111;
+    --white: #fff;
+    --light-color: #666;
+    --light-bg: #eee;
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --border: .1rem solid rgba(0,0,0,.3);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+/* Estilo de Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Valor padrão de 250px */
+    gap: 2rem;
+}
+
+/* Títulos */
+.title-text {
+    font-size: 2rem; /* Ajuste o tamanho conforme necessário */
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+/* Texto para gráficos */
+.graph-text {
+    font-size: 1.6rem; /* Ajuste o tamanho conforme necessário */
+    color: var(--light-color);
+    line-height: 1.5;
+}
+
+/* Estilo para ícones */
+.icons-box {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background: var(--light-bg);
+    color: var(--black);
+    cursor: pointer;
+    text-align: center;
+}
+
+.icons-box:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+}
+
+.header {
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem 10%;
     display: flex;
-    justify-content: space-between; /* Espaço entre logo e ícones sociais */
     align-items: center;
-  }
-  
-  .logo {
-    height: 80px; /* Tamanho do logo */
-    border-radius: 8px; /* Arredondamento das bordas do logo */
-  }
-  
-  .header-text {
-    text-align: center; /* Centraliza o texto */
-    flex: 1;
-  }
-  
-  .header-text h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
-    margin: 0;
-    color: #fff;
-  }
-  
-  .header-text .contact-number {
-    font-size: 1.2em;
-    color: #ccc;
-  }
-  
-  /* Social Links Styles */
-  .social-links {
-    display: flex;
-    gap: 10px; /* Espaço entre os ícones */
-  }
-  
-  .social-icon {
-    color: #fff;
-    font-size: 1.5em;
-    transition: color 0.3s ease;
-  }
-  
-  .social-icon:hover {
-    color: #ff0000; /* Cor dos ícones ao passar o mouse */
-  }
-  
-  /* Carousel Styles */
-  .carousel {
-    position: relative;
-    max-width: 100%;
-    height: 700px; /* Tamanho do carousel */
-    margin: 0 auto;
-    overflow: hidden;
-    background-color: #111;
-  }
-  
-  .carousel-wrapper {
-    display: flex;
-    position: relative;
-    height: 100%;
-  }
-  
-  .carousel-image {
-    display: none;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Imagens ocupam todo o espaço */
-  }
-  
-  .carousel-image.active {
-    display: block;
-  }
-  
-  /* Carousel Controls (Setas) */
-  .carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-    color: #fff;
-    border: none;
-    font-size: 18px; /* Tamanho da seta */
-    padding: 8px; /* Padding reduzido */
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 50%; /* Formato arredondado */
-    transition: background-color 0.3s ease;
-  }
-  
-  .carousel-control:hover {
-    background-color: rgba(255, 255, 255, 0.3); /* Efeito de hover */
-  }
-  
-  .carousel-control.prev {
-    left: 15px; /* Setas próximas às bordas */
-  }
-  
-  .carousel-control.next {
-    right: 15px;
-  }
-  
-  /* Contact Form Styles */
-  .contact-form {
-    background-color: #333; /* Fundo cinza escuro */
-    padding: 40px 20px;
-    max-width: 600px;
-    margin: 50px auto;
-    border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-  }
-  
-  .contact-form h3 {
-    color: #fff;
-    margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .contact-form label {
-    display: block;
-    font-size: 1em;
-    color: #fff;
-    margin-bottom: 10px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #555; /* Fundo dos inputs */
-    color: #fff; /* Texto dos inputs */
-    font-size: 1em;
-  }
-  
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    outline: none;
-    border: 2px solid #ff0000; /* Borda vermelha no foco */
-  }
-  
-  .contact-form button {
-    background-color: #ff0000; /* Botão vermelho */
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .contact-form button:hover {
-    background-color: #cc0000; /* Efeito de hover */
-  }
-  
-  /* About Section Styles */
-  .info-section {
-    background-color: #222; /* Fundo cinza escuro */
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .info-section h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
-    color: #e0e0e0; /* Prata para contraste */
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .info-section p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #ccc; /* Texto em prata claro */
-  }
-  
-  /* Footer Styles */
-  footer {
-    background-color: #222;
-    padding: 20px;
-    text-align: center;
-    color: #fff;
-  }
-  
-  footer p {
-    margin: 0;
-    font-size: 0.9em;
-    font-family: 'Roboto', sans-serif;
-  }
-  
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+/* Estilo para o logo */
+.header .logo {
+    font-size: 2.5rem;
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+.header .logo span {
+    color: var(--yellow);
+}
+
+/* Substituindo @include titleText(2rem); */
+.navbar a {
+    font-size: 2rem;
+    color: var(--black);
+    text-transform: capitalize;
+    margin: 0 1rem;
+}
+
+.navbar a:hover {
+    color: var(--yellow);
+}
