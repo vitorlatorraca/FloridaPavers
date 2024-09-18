@@ -5,20 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Pavers Florida</title>
 
-    <!-- font awesome cdn link -->
+    <!-- Font Awesome CDN link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <!-- custom css file link -->
-     <link rel="stylesheet" href="styles.css">
-
+    <!-- Custom CSS file link -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-
-    <!-- header section starts -->
-
+    <!-- Header section starts -->
     <header class="header">
-
         <a href="#" class="logo"><span>Florida Pavers</span></a>
 
         <nav class="navbar">
@@ -28,7 +23,6 @@
             <a href="#projects">projects</a>
             <a href="#pricing">pricing</a>
             <a href="#blogs">blogs</a>
-            <a href="#home">home</a>
         </nav>
 
         <div class="icons">
@@ -38,37 +32,85 @@
             <div id="login-btn" class="fas fa-user"></div>
         </div>
 
+        <!-- Search Form -->
         <form action="" class="search-form">
-            <input type="search" name="" placeholder="search here..." id="search-box">
+            <input type="search" placeholder="search here..." id="search-box">
             <label for="search-box" class="fas fa-search"></label>
         </form>
 
+        <!-- Login Form -->
+        <form action="" class="login-form">
+            <h3>login form</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="password" placeholder="enter your password" class="box">
+            <div class="flex">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me"> remember me</label>
+                <a href="#"> forgot password</a>
+            </div>
+            <input type="submit" value="login now" class="btn">
+            <p>don't have an account? <a href="#">create one!</a></p>
+        </form>
     </header>
 
-    <!-- header section ends -->
+    <!-- Contact Info Section -->
+    <div class="contact-info">
+        <div id="close-contact-info" class="fas fa-times"></div>
+        <div class="info">
+            <i class="fas fa-phone"></i>
+            <h3>phone number</h3>
+            <p>+239-955-1444</p>
+        </div>
+        <div class="info">
+            <i class="fas fa-envelope"></i>
+            <h3>email</h3>
+            <p>jandir.vix@gmail.com</p>
+        </div>
+        <div class="info">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>office address</h3>
+            <p>Unknown</p>
+        </div>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+    </div>
+    
+    <!-- Main content section -->
 
+    <section class="home" id="home">
 
+        <div class="home slider">
 
+            <div class="w">
 
+                <section class="slide" style="background: url(images/home-slide-1.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>we provide best services</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem rem quam dignissimos, atque cupiditate labore at
+                        officiis enim perferendis earum officia eveniet nesciunt autem, voluptas quos praesentium delectus totam tenetur!</p>
+                    <a href="#about" class="btn">get started</a>
+                    </div>
+                </section>
 
+                <section class="slide" style="background: url(images/home-slide-2.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>making dreams come true</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem rem quam dignissimos, atque cupiditate labore at
+                        officiis enim perferendis earum officia eveniet nesciunt autem, voluptas quos praesentium delectus totam tenetur!</p>
+                    <a href="#about" class="btn">get started</a>
+                    </div>
+                </section>
 
+            </div>
 
+        </div>
 
+    </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- custom js file link -->
-     <script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
