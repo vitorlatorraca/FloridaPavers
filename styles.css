@@ -78,6 +78,20 @@ html::-webkit-scrollbar-thumb {
     background: var(--yellow);
 }
 
+section {
+    padding: 5rem 10%;
+}
+
+.heading {
+    margin-bottom: 3rem;
+    font-size: 3rem; 
+    font-weight: bold; 
+    line-height: 1.2; 
+    padding-left: 1rem;
+    border-left: 1rem solid var(--yellow);
+}
+
+
 .btn {
     display: inline-block;
     margin-top: 1rem;
@@ -116,6 +130,7 @@ html::-webkit-scrollbar-thumb {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    background: var(--white);
 }
 
 .header .logo {
@@ -349,60 +364,287 @@ html::-webkit-scrollbar-thumb {
     color: var(--white);
 }
 
+.home {
+    padding: 0;
+}
 
-/* Media Queries */
-@media (max-width: 1200px) {
-    .header {
-        padding: 1.5rem 2rem;
+.home .slide {
+    min-height: 60rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-size: cover !important;
+}
+
+.home .slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, var(--white), transparent);
+}
+
+.home .slide .content {
+    width: 50rem;
+    position: relative;
+}
+
+.home .slide .content h3 {
+    font-size: 6rem;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.home .slide .content p {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    top: initial;
+    bottom: 0;
+    left: initial;
+    right: 0;
+    height: 7rem;
+    width: 7rem;
+    line-height: 7rem;
+    font-size: 3rem;
+    background: var(--white);
+    transition: background 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: var(--yellow);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.swiper-button-prev{
+    right: 7rem;
+}
+
+.about{
+
+    .row{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        .video{
+            flex:1 1 41rem;
+
+            video{
+                width: 100%;
+            }
+        }
+    
+        .content{
+            flex: 1 1 41rem;
+
+            h3{
+                font-size: 3.5rem;
+                font-weight: bold;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+            }
+
+            p{
+                font-size: 1.5rem;
+                line-height: 1.6;
+                color: var(--light-color);
+                padding: 1rem 0;
+            }
+        }
+    }
+
+
+    .box-container{
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+        gap: 1.5rem;
+        align-items: center;
+
+
+        .box{
+            text-align: center;
+            background: var(--light-bg);
+            padding: 3rem;
+        }
+
+        h3{
+            font-size: 4rem;
+        }
+
+        p{
+            font-size: 1.5rem;
+            padding-top: .5rem;
+        } 
     }
 }
 
+/* Media Queries */
+
+/* Para telas de até 991px de largura */
 @media (max-width: 991px) {
     html {
         font-size: 55%;
     }
 
-    .navbar {
-        position: absolute;
-        top: 99%;
-        left: 0;
-        right: 0;
-        background: var(--white);
-        border-top: var(--border);
-        border-bottom: var(--border);
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        transition: clip-path 0.5s ease-in-out;
+    .header {
+        padding: 2rem;
     }
 
-    .navbar.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    section {
+        padding: 5rem 2rem;
     }
 
-    .navbar a {
-        display: block;
-        margin: 2rem;
+    .contact-info {
+        width: 100%;
     }
 
     #menu-btn {
-        display: inline-block;
+        display: initial;
+    }
+
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+    }
+
+    .navbar {
+        position: absolute;
+        top: 120%;
+        right: 2rem;
+        border-radius: .5rem;
+        width: 30rem;
+        background: var(--white);
+        box-shadow: var(--box-shadow);
+        padding: 2rem;
+        text-align: center;
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        margin: 1.5rem 0;
+        display: block;
+    }
+
+    .search-form {
+        width: 90%;
+    }
+
+    .home .swiper-slide .content {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .home .swiper-slide .content h3 {
+        font-size: 4rem;
+    }
+
+    .home .swiper-slide .content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        height: 5rem;
+        width: 5rem;
+        font-size: 2rem;
+        line-height: 5rem;
     }
 }
 
+/* Para telas de até 768px de largura */
 @media (max-width: 768px) {
-
-    .header {
-        .search-form{
-            width: 90%;
-        }
-
-        .login-form{
-            width: 90%;
-        }
-    }
-}
-@media (max-width: 450px) {
     html {
         font-size: 50%;
     }
+
+    .header {
+        padding: 1.5rem;
+    }
+
+    section {
+        padding: 4rem 1.5rem;
+    }
+
+    .navbar {
+        width: 25rem;
+    }
+    
+    .home .slide{
+        text-align: center;
+
+        h3{
+            font-size: 2rem;
+        }
+    }
+
+    .home .swiper-slide .content h3 {
+        font-size: 3.5rem;
+    }
+
+    .home .swiper-slide .content p {
+        font-size: 1.1rem;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        height: 4rem;
+        width: 4rem;
+        font-size: 1.5rem;
+        line-height: 4rem;
+    }
 }
 
+/* Para telas de até 450px de largura */
+@media (max-width: 450px) {
+    html {
+        font-size: 45%;
+    }
+
+    .header {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    .navbar {
+        width: 20rem;
+    }
+
+    .home .swiper-slide .content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home .swiper-slide .content p {
+        font-size: 1rem;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        height: 3rem;
+        width: 3rem;
+        font-size: 1.2rem;
+        line-height: 3rem;
+    }
+}

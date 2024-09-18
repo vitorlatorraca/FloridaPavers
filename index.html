@@ -8,6 +8,9 @@
     <!-- Font Awesome CDN link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
     <!-- Custom CSS file link -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -83,34 +86,90 @@
 
     <section class="home" id="home">
 
-        <div class="home slider">
+        <div class=" swiper home-slider">
 
-            <div class="w">
+            <div class="swiper-wrapper">
 
-                <section class="slide" style="background: url(images/home-slide-1.jpg) no-repeat;">
+                <section class="swiper-slide slide" style="background: url(images/image4.jpg) no-repeat;">
                     <div class="content">
                         <h3>we provide best services</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem rem quam dignissimos, atque cupiditate labore at
-                        officiis enim perferendis earum officia eveniet nesciunt autem, voluptas quos praesentium delectus totam tenetur!</p>
+                        <p>Get in touch with us! +239-955-1444</p>
                     <a href="#about" class="btn">get started</a>
                     </div>
                 </section>
 
-                <section class="slide" style="background: url(images/home-slide-2.jpg) no-repeat;">
+                <section class="swiper-slide slide" style="background: url(images/image7.jpg) no-repeat;">
                     <div class="content">
                         <h3>making dreams come true</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem rem quam dignissimos, atque cupiditate labore at
-                        officiis enim perferendis earum officia eveniet nesciunt autem, voluptas quos praesentium delectus totam tenetur!</p>
+                        <p>Get in touch with us! +239-955-1444 </p>
+                    <a href="#about" class="btn">get started</a>
+                    </div>
+                </section>
+
+                <section class="swiper-slide slide" style="background: url(images/image6.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>from concept to creation</h3>
+                        <p>Get in touch with us! +239-955-1444</p>
                     <a href="#about" class="btn">get started</a>
                     </div>
                 </section>
 
             </div>
 
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
         </div>
 
     </section>
 
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> about us</h1>
+
+        <div class="row">
+
+            <div class="video">
+                <video src="images/about-vid.mp4" loop muted></video>
+            </div>
+
+            <div class="content">
+                <h3>We will provide you the best work which you dreamt for!</h3>
+                <p> The best paver in Florida!</p>
+                <a href="#services" class="btn">read more</a>
+            </div>
+
+        </div>
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>10+</h3>
+                <p>Years of Experience</p>
+            </div>
+
+            <div class="box">
+                <h3>150+</h3>
+                <p>Projects completed</p>
+            </div>
+
+            <div class="box">
+                <h3>1000+</h3>
+                <p>Satisfied clients</p>
+            </div>
+
+            <div class="box">
+                <h3>10+</h3>
+                <p>Active Workers</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    
 </body>
 </html>
