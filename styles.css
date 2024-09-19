@@ -534,6 +534,74 @@ section {
     }
 }
 
+.projects {
+    background: var(--black);
+
+    .heading {
+        color: var(--white);
+    }
+
+    .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+        gap: 1.5rem;
+
+        .box {
+            cursor: initial;
+
+            &:hover .image img {
+                transform: scale(1.1);
+                transition: transform 0.3s ease;
+            }
+
+            .image {
+                height: 40rem;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: transform 0.3s ease; /* Transição suave aplicada aqui */
+                }
+            }
+
+            .content {
+                display: flex;
+                gap: .5rem;
+                background: var(--white);
+                justify-content: space-between;
+
+                .info {
+                    padding: 1rem 2rem;
+
+                    h3 {
+                        font-size: 1.7rem;
+                        font-weight: bold;
+                        color: var(--black);
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                        line-height: 1.6;
+                        color: var(--light-color);
+                    }
+                }
+
+                i {
+                    width: 7.5rem;
+                    font-size: 3rem;
+                    background: var(--yellow);
+                    color: var(--white);
+                    cursor: pointer;
+                    text-align: center;
+                    line-height: 7.5rem;
+                }
+            }
+        }
+    }
+}
+
 
 /* Media Queries */
 
