@@ -602,6 +602,59 @@ section {
     }
 }
 
+.reviews {
+    .slide {
+        p {
+            padding: 1.5rem;
+            background-color: var(--light-bg);
+            position: relative;
+            margin-bottom: 3rem;
+            font-size: 1.5rem;
+            line-height: 1.6;
+            color: var(--black);
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -1rem;
+                left: 2rem;
+                height: 2rem;
+                width: 2rem;
+                background: var(--light-bg);
+                transform: rotate(45deg);
+            }
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            img {
+                height: 7rem;
+                width: 7rem;
+                border-radius: 50%;
+            }
+
+            h3 {
+                font-size: 1.7rem;
+                font-weight: bold;
+                color: var(--black);
+                text-transform: uppercase;
+            }
+
+            .stars {
+                padding: 0.5rem;
+
+                i {
+                    font-size: 1.5rem;
+                    color: var(--yellow);
+                }
+            }
+        }
+    }
+}
+
 
 /* Media Queries */
 

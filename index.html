@@ -8,11 +8,16 @@
     <!-- Font Awesome CDN link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+    <!-- LightGallery CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <!-- Custom CSS file link -->
     <link rel="stylesheet" href="styles.css">
+
+
 </head>
 <body>
     <!-- Header section starts -->
@@ -47,7 +52,7 @@
             <input type="email" placeholder="enter your email" class="box">
             <input type="password" placeholder="enter your password" class="box">
             <div class="flex">
-                <input type="checkbox" name="" id="remember-me">
+                <input type="checkbox" id="remember-me">
                 <label for="remember-me"> remember me</label>
                 <a href="#"> forgot password</a>
             </div>
@@ -81,28 +86,24 @@
             <a href="#" class="fab fa-linkedin"></a>
         </div>
     </div>
-    
+
     <!-- Main content section -->
-
     <section class="home" id="home">
-
-        <div class=" swiper home-slider">
-
+        <div class="swiper home-slider">
             <div class="swiper-wrapper">
-
                 <section class="swiper-slide slide" style="background: url(images/image4.jpg) no-repeat;">
                     <div class="content">
                         <h3>we provide best services</h3>
                         <p>Get in touch with us! +239-955-1444</p>
-                    <a href="#about" class="btn">get started</a>
+                        <a href="#about" class="btn">get started</a>
                     </div>
                 </section>
 
                 <section class="swiper-slide slide" style="background: url(images/image7.jpg) no-repeat;">
                     <div class="content">
                         <h3>making dreams come true</h3>
-                        <p>Get in touch with us! +239-955-1444 </p>
-                    <a href="#about" class="btn">get started</a>
+                        <p>Get in touch with us! +239-955-1444</p>
+                        <a href="#about" class="btn">get started</a>
                     </div>
                 </section>
 
@@ -110,40 +111,30 @@
                     <div class="content">
                         <h3>from concept to creation</h3>
                         <p>Get in touch with us! +239-955-1444</p>
-                    <a href="#about" class="btn">get started</a>
+                        <a href="#about" class="btn">get started</a>
                     </div>
                 </section>
-
             </div>
 
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-
         </div>
-
     </section>
 
-
     <section class="about" id="about">
-
         <h1 class="heading"> about us</h1>
-
         <div class="row">
-
             <div class="video">
                 <video src="images/about-vid.mp4" loop muted></video>
             </div>
-
             <div class="content">
                 <h3>We will provide you the best work which you dreamt for!</h3>
-                <p> The best paver in Florida!</p>
+                <p>The best paver in Florida!</p>
                 <a href="#services" class="btn">read more</a>
             </div>
-
         </div>
 
         <div class="box-container">
-
             <div class="box">
                 <h3>10+</h3>
                 <p>Years of Experience</p>
@@ -167,11 +158,9 @@
     </section>
 
     <section class="services" id="services">
-
         <h1 class="heading">our services</h1>
 
         <div class="box-container">
-
             <div class="box">
                 <img src="images/services.jpeg" alt="">
                 <h3>building construction</h3>
@@ -196,15 +185,11 @@
                 <p>Our team of experts will help you build your dream home or office.</p>
             </div>
         </div>
-
     </section>
 
     <section class="projects" id="projects">
-
-        <h1 class="heading"> our projects</h1>
-
+        <h1 class="heading">our projects</h1>
         <div class="box-container">
-
             <a href="images/image6.jpg" class="box">
                 <div class="image">
                     <img src="images/image6.jpg" alt="">
@@ -218,40 +203,167 @@
                 </div>
             </a>
 
-            
             <a href="images/image7.jpg" class="box">
                 <div class="image">
-                    <img src="images/image6.jpg" alt="">
+                    <img src="images/image7.jpg" alt="">
                 </div>
                 <div class="content">
                     <div class="info">
-                        <h3>project 1</h3>
+                        <h3>project 2</h3>
                         <p>XX.</p>
                     </div>
                     <i class="fas fa-plus"></i>
                 </div>
-            </a>
-
-            
-            <a href="images/image6.jpg" class="box">
-                <div class="image">
-                    <img src="images/image6.jpg" alt="">
-                </div>
-                <div class="content">
-                    <div class="info">
-                        <h3>project 1</h3>
-                        <p>XX.</p>
+                <a href="images/image7.jpg" class="box">
+                    <div class="image">
+                        <img src="images/image7.jpg" alt="">
                     </div>
-                    <i class="fas fa-plus"></i>
-                </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>project 2</h3>
+                            <p>XX.</p>
+                        </div>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
             </a>
         </div>
+    </section>
+    
 
+    <section class="reviews">
+        <h1 class="heading">clients reviews</h1>
+    
+        <div class="swiper reviews-slider">
+            <div class="swiper-wrapper">
+    
+                <div class="swiper-slide slide">
+                    <p>Good paver service. I am glad that I hired them.</p>
+                    <div class="user">
+                        <img src="images/yuri.jpeg" alt="">
+                        <div class="info">
+                            <h3>Arrascaeta</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <p>They built my dream house!</p>
+                    <div class="user">
+                        <img src="images/yuri.jpeg" alt="">
+                        <div class="info">
+                            <h3>Diego</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <p>Fantastic service, they were very professional.</p>
+                    <div class="user">
+                        <img src="images/yuri.jpeg" alt="">
+                        <div class="info">
+                            <h3>Lucas</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <p>Great communication and finished ahead of schedule!</p>
+                    <div class="user">
+                        <img src="images/yuri.jpeg" alt="">
+                        <div class="info">
+                            <h3>Felipe</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <p>I highly recommend them for any project.</p>
+                    <div class="user">
+                        <img src="images/yuri.jpeg" alt="">
+                        <div class="info">
+                            <h3>Paulo</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <p>Exceptional work! I’m thrilled with the results.</p>
+                    <div class="user">
+                        <img src="images/yuri.jpeg" alt="">
+                        <div class="info">
+                            <h3>Bruno</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer section -->
+    <section class="footer">
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+        <div class="credit"> created by <span>Vitor Espindula Da Rocha Latorraca</span> | all rights reserved!</div>
     </section>
 
-
+    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- LightGallery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+    <!-- Custom JS file -->
     <script src="script.js"></script>
-    
 </body>
 </html>
